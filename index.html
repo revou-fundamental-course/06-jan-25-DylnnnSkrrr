@@ -3,81 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Template</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div class="logo">🌐</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Profile</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Message Us</a></li>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Message Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="welcome">
-            <h1>Hi Harfi, Welcome To Website</h1>
-            <p>Ini adalah website latihan pertama</p>
-        </section>
-
-        <section class="our-headquarter">
-            <h2>Our Headquarter</h2>
-            <div class="locations">
-                <div class="location">
-                    <div class="circle"></div>
-                    <p>Jakarta</p>
-                </div>
-                <div class="location">
-                    <div class="circle"></div>
-                    <p>Bandung</p>
-                </div>
-                <div class="location">
-                    <div class="circle"></div>
-                    <p>Surabaya</p>
-                </div>
+    <section id="home" class="welcome">
+        <h1>Hi Dylan, Welcome To Website</h1>
+        <p>Ini adalah website latihan pertama</p>
+        <div class="corousel">
+            <div class="slides">
+                <img src="images/hunter pro.png" alt="Slide 1">
+                <img src="images/killua.png" alt="Slide 2">
+                <img src="images/kurapika.png" alt="Slide 3">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="message-us">
-            <h2>Message Us</h2>
+    <section id="headquarter">
+        <h2>Our Headquarter</h2>
+        <div class="locations">
+            <div class="location">
+                <div class="circle">
+                    <img src="images/jakarta.png" alt="Jakarta">
+                </div>
+                <p>Jakarta</p>
+            </div>
+            <div class="location">
+                <div class="circle">
+                    <img src="images/bandung.png" alt="Bandung">
+                </div>
+                <p>Bandung</p>
+            </div>
+            <div class="location">
+                <div class="circle">
+                    <img src="images/surabaya.png" alt="Surabaya">
+                </div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Message Us</h2>
+        <div class="form-container" style="display: flex; gap: 20px;"> 
             <form id="message-form">
                 <label for="name">Nama</label>
-                <input type="text" id="name" name="name" placeholder="Nama">
-
+                <input type="text" id="name" placeholder="Nama">
+                
                 <label for="birthdate">Tanggal Lahir</label>
-                <input type="date" id="birthdate" name="birthdate">
-
+                <input type="date" id="birthdate">
+                
                 <label>Jenis Kelamin</label>
-                <div>
-                    <input type="radio" id="male" name="gender" value="Laki-Laki">
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Laki-Laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <input type="radio" id="female" name="gender" value="female">
                     <label for="female">Perempuan</label>
                 </div>
-
+                
                 <label for="message">Pesan</label>
-                <textarea id="message" name="message" placeholder="Pesan"></textarea>
-
+                <textarea id="message" placeholder="Pesan"></textarea>
+                
                 <button type="submit">Submit</button>
             </form>
-
-            <div class="submitted-data">
-                <h3>Data Anda:</h3>
-                <p id="current-time"></p>
-                <p id="submitted-info"></p>
+            <div id="result-display" style="border: 1px solid #ccc; padding: 10px; width: 300px;">
+                <h3>Submitted Info</h3>
+                <div id="submitted-info">Belum ada data yang dimasukkan.</div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>Created By RevoU</p>
+        <p>Created by Dylan</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
